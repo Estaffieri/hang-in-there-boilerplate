@@ -8,6 +8,8 @@ var mainPosterView = document.querySelector('.main-poster');
 var createPosterFormView = document.querySelector('.poster-form');
 var savedPostersButton = document.querySelector('.show-saved');
 var savedPostersView = document.querySelector('.saved-posters');
+var takeMeBackButton = document.querySelector('.show-main');
+var backToMainButton = document.querySelector('.back-to-main');
 
 // we've provided you with some data to work with 👇
 var images = [
@@ -118,6 +120,8 @@ var currentPoster;
 randomButton.addEventListener('click', displayCurrentPoster);
 makeYourOwnPosterButton.addEventListener('click', showFormView);
 savedPostersButton.addEventListener('click', showSavedPostersView);
+takeMeBackButton.addEventListener('click', sendToMainPage);
+backToMainButton.addEventListener('click', sendToMainPage);
 
 
 // functions and event handlers go here 👇
@@ -145,4 +149,10 @@ function showFormView() {
 function showSavedPostersView() {
   mainPosterView.classList.add('hidden');
   savedPostersView.classList.remove('hidden');
+};
+
+function sendToMainPage() {
+  mainPosterView.classList.remove('hidden');
+  createPosterFormView.classList.add('hidden');
+  savedPostersView.classList.add('hidden');
 };
