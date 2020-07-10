@@ -112,6 +112,7 @@ var currentPoster;
 // event listeners go here 👇
 randomButton.addEventListener('click', displayCurrentPoster);
 
+
 // functions and event handlers go here 👇
 
 
