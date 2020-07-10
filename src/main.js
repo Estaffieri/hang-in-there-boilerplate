@@ -1,10 +1,15 @@
 // query selector variables go here 👇
-
 var title = document.querySelector('.poster-title');
 var imageUrl = document.querySelector('.poster-img');
 var quote = document.querySelector('.poster-quote');
 var randomButton = document.querySelector('.show-random');
-
+var makeYourOwnPosterButton = document.querySelector('.show-form');
+var mainPosterView = document.querySelector('.main-poster');
+var createPosterFormView = document.querySelector('.poster-form');
+var savedPostersButton = document.querySelector('.show-saved');
+var savedPostersView = document.querySelector('.saved-posters');
+var takeMeBackButton = document.querySelector('.show-main');
+var backToMainButton = document.querySelector('.back-to-main');
 
 // we've provided you with some data to work with 👇
 var images = [
@@ -109,21 +114,45 @@ var savedPosters = [];
 
 var currentPoster;
 
+
 // event listeners go here 👇
+
 randomButton.addEventListener('click', displayCurrentPoster);
+makeYourOwnPosterButton.addEventListener('click', showFormView);
+savedPostersButton.addEventListener('click', showSavedPostersView);
+takeMeBackButton.addEventListener('click', sendToMainPage);
+backToMainButton.addEventListener('click', sendToMainPage);
 
 
 // functions and event handlers go here 👇
 
 
+
 // (we've provided one for you to get you started)!
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
-}
+};
+
 function displayCurrentPoster() {
   title.innerText = titles[getRandomIndex(titles)];
   imageUrl.src = images[getRandomIndex(images)];
   quote.innerText = quotes[getRandomIndex(quotes)];
 };
 
-displayCurrentPoster();
+window.onload = displayCurrentPoster();
+
+function showFormView() {
+  mainPosterView.classList.add('hidden');
+  createPosterFormView.classList.remove('hidden');
+};
+
+function showSavedPostersView() {
+  mainPosterView.classList.add('hidden');
+  savedPostersView.classList.remove('hidden');
+};
+
+function sendToMainPage() {
+  mainPosterView.classList.remove('hidden');
+  createPosterFormView.classList.add('hidden');
+  savedPostersView.classList.add('hidden');
+};
