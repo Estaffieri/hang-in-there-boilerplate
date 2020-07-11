@@ -29,18 +29,18 @@ Our estimated schedule is as follows:
 
 ## Progression
 
-7/7:
+7/7: Gave day one deliverables to instructors and reviewed the project scope. Created DTR version one.
 
-7/8:
+7/8: Reviewed DOM, HTML connections. Discussed key functions that might be necessary for the project.
 
-7/9:
+7/9: Fixed GitHub remote repo connection. Initial commit was created to load poster when window is refreshed with the displayCurrentPoster function. We created the functionality for the "show another random poster button". We then pushed these updates to our master branch. We then created the showFormView, showSavedPostersView, and sendToMainPage functions.
 
 <p align="center">Image of Main Poster View </br>
   <img width="460" height="300" src="" alt="Screenshot of Main Poster View ">
 </p>
 
 
-7/10:
+7/10: Update the project README file and added project progression notes.
 
 7/11:
 
