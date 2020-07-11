@@ -166,7 +166,15 @@ function createNewPoster(event) {
   event.preventDefault()
   currentPoster = new Poster(posterInputImage.value, posterInputTitle.value, posterInputQuote.value);
   images.push(currentPoster.imageURL), titles.push(currentPoster.title), quotes.push(currentPoster.quote)
+  displayNewPosterFromInput()
+}
+
+function displayNewPosterFromInput() {
+  title.innerText = currentPoster.title;
+  imageUrl.src = currentPoster.imageURL;
+  quote.innerText = currentPoster.quote;
   sendToMainPage()
 }
+//New data pushed to end. Access from end of array for loop? .pop()?
 
 // createNewPoster();
