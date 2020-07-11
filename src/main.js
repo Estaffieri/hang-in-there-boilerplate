@@ -15,6 +15,7 @@ var posterInputTitle = document.querySelector('#poster-title');
 var posterInputQuote = document.querySelector('#poster-quote');
 var showNewPosterButton = document.querySelector('.make-poster');
 var inputForm = document.querySelector('form');
+var savePosterButton = document.querySelector('.save-poster');
 
 // we've provided you with some data to work with 👇
 var images = [
@@ -128,6 +129,8 @@ savedPostersButton.addEventListener('click', showSavedPostersView);
 takeMeBackButton.addEventListener('click', sendToMainPage);
 backToMainButton.addEventListener('click', sendToMainPage);
 inputForm.addEventListener('submit', createNewPoster);
+savePosterButton.addEventListener('click', savePosterToArray)
+
 
 // functions and event handlers go here 👇
 function getRandomIndex(array) {
@@ -163,11 +166,15 @@ function createNewPoster(event) {
   currentPoster = new Poster(posterInputImage.value, posterInputTitle.value, posterInputQuote.value);
   images.push(currentPoster.imageURL), titles.push(currentPoster.title), quotes.push(currentPoster.quote)
   displayNewPosterFromInput()
-}
+};
 
 function displayNewPosterFromInput() {
   title.innerText = currentPoster.title;
   imageUrl.src = currentPoster.imageURL;
   quote.innerText = currentPoster.quote;
   sendToMainPage()
-}
+};
+
+function savePosterToArray() {
+  savedPosters.push(currentPoster);
+};
