@@ -15,6 +15,7 @@ var posterInputTitle = document.querySelector('#poster-title');
 var posterInputQuote = document.querySelector('#poster-quote');
 var showNewPosterButton = document.querySelector('.make-poster');
 var inputForm = document.querySelector('form');
+
 // we've provided you with some data to work with 👇
 var images = [
   "./assets/bees.jpg",
@@ -126,14 +127,9 @@ makeYourOwnPosterButton.addEventListener('click', showFormView);
 savedPostersButton.addEventListener('click', showSavedPostersView);
 takeMeBackButton.addEventListener('click', sendToMainPage);
 backToMainButton.addEventListener('click', sendToMainPage);
-// showNewPosterButton.addEventListener('click' , createNewPoster);
 inputForm.addEventListener('submit', createNewPoster);
 
 // functions and event handlers go here 👇
-
-
-
-// (we've provided one for you to get you started)!
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
 };
@@ -175,6 +171,3 @@ function displayNewPosterFromInput() {
   quote.innerText = currentPoster.quote;
   sendToMainPage()
 }
-//New data pushed to end. Access from end of array for loop? .pop()?
-
-// createNewPoster();
