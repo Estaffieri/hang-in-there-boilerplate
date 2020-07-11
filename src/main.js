@@ -10,6 +10,11 @@ var savedPostersButton = document.querySelector('.show-saved');
 var savedPostersView = document.querySelector('.saved-posters');
 var takeMeBackButton = document.querySelector('.show-main');
 var backToMainButton = document.querySelector('.back-to-main');
+var posterInputImage = document.querySelector('#poster-image-url');
+var posterInputTitle = document.querySelector('#poster-title');
+var posterInputQuote = document.querySelector('#poster-quote');
+var showNewPosterButton = document.querySelector('.make-poster');
+var inputForm = document.querySelector('form');
 
 // we've provided you with some data to work with 👇
 var images = [
@@ -122,13 +127,9 @@ makeYourOwnPosterButton.addEventListener('click', showFormView);
 savedPostersButton.addEventListener('click', showSavedPostersView);
 takeMeBackButton.addEventListener('click', sendToMainPage);
 backToMainButton.addEventListener('click', sendToMainPage);
-
+inputForm.addEventListener('submit', createNewPoster);
 
 // functions and event handlers go here 👇
-
-
-
-// (we've provided one for you to get you started)!
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
 };
@@ -156,3 +157,17 @@ function sendToMainPage() {
   createPosterFormView.classList.add('hidden');
   savedPostersView.classList.add('hidden');
 };
+
+function createNewPoster(event) {
+  event.preventDefault()
+  currentPoster = new Poster(posterInputImage.value, posterInputTitle.value, posterInputQuote.value);
+  images.push(currentPoster.imageURL), titles.push(currentPoster.title), quotes.push(currentPoster.quote)
+  displayNewPosterFromInput()
+}
+
+function displayNewPosterFromInput() {
+  title.innerText = currentPoster.title;
+  imageUrl.src = currentPoster.imageURL;
+  quote.innerText = currentPoster.quote;
+  sendToMainPage()
+}
