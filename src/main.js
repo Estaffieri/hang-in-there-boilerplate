@@ -14,6 +14,7 @@ var posterInputImage = document.querySelector('#poster-image-url');
 var posterInputTitle = document.querySelector('#poster-title');
 var posterInputQuote = document.querySelector('#poster-quote');
 var showNewPosterButton = document.querySelector('.make-poster');
+var inputForm = document.querySelector('form');
 // we've provided you with some data to work with 👇
 var images = [
   "./assets/bees.jpg",
@@ -125,8 +126,8 @@ makeYourOwnPosterButton.addEventListener('click', showFormView);
 savedPostersButton.addEventListener('click', showSavedPostersView);
 takeMeBackButton.addEventListener('click', sendToMainPage);
 backToMainButton.addEventListener('click', sendToMainPage);
-showNewPosterButton.addEventListener('click' , createNewPoster);
-
+// showNewPosterButton.addEventListener('click' , createNewPoster);
+inputForm.addEventListener('submit', createNewPoster);
 
 // functions and event handlers go here 👇
 
@@ -160,9 +161,12 @@ function sendToMainPage() {
   createPosterFormView.classList.add('hidden');
   savedPostersView.classList.add('hidden');
 };
-function createNewPoster() {
-  currentPoster = new Poster(posterInputImage.value, posterInputTitle.value, posterInputQuote.value)
-  return
+
+function createNewPoster(event) {
+  event.preventDefault()
+  currentPoster = new Poster(posterInputImage.value, posterInputTitle.value, posterInputQuote.value);
+  images.push(currentPoster.imageURL), titles.push(currentPoster.title), quotes.push(currentPoster.quote)
+  sendToMainPage()
 }
 
-createNewPoster();
+// createNewPoster();
