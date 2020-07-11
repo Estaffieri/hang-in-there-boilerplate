@@ -10,7 +10,10 @@ var savedPostersButton = document.querySelector('.show-saved');
 var savedPostersView = document.querySelector('.saved-posters');
 var takeMeBackButton = document.querySelector('.show-main');
 var backToMainButton = document.querySelector('.back-to-main');
-
+var posterInputImage = document.querySelector('#poster-image-url');
+var posterInputTitle = document.querySelector('#poster-title');
+var posterInputQuote = document.querySelector('#poster-quote');
+var showNewPosterButton = document.querySelector('.make-poster');
 // we've provided you with some data to work with 👇
 var images = [
   "./assets/bees.jpg",
@@ -122,6 +125,7 @@ makeYourOwnPosterButton.addEventListener('click', showFormView);
 savedPostersButton.addEventListener('click', showSavedPostersView);
 takeMeBackButton.addEventListener('click', sendToMainPage);
 backToMainButton.addEventListener('click', sendToMainPage);
+showNewPosterButton.addEventListener('click' , createNewPoster);
 
 
 // functions and event handlers go here 👇
@@ -156,3 +160,9 @@ function sendToMainPage() {
   createPosterFormView.classList.add('hidden');
   savedPostersView.classList.add('hidden');
 };
+function createNewPoster() {
+  currentPoster = new Poster(posterInputImage.value, posterInputTitle.value, posterInputQuote.value)
+  return
+}
+
+createNewPoster();
