@@ -130,7 +130,8 @@ makeYourOwnPosterButton.addEventListener('click', showFormView);
 savedPostersButton.addEventListener('click', showSavedPostersView);
 takeMeBackButton.addEventListener('click', sendToMainPage);
 backToMainButton.addEventListener('click', sendToMainPage);
-inputForm.addEventListener('submit', createNewPoster);
+showNewPosterButton.addEventListener('click', createNewPoster);
+// inputForm.addEventListener('submit', createNewPoster);
 savePosterButton.addEventListener('click', savePosterToArray);
 savePosterButton.addEventListener('click', addSavedPosterToGrid);
 
@@ -145,6 +146,7 @@ function displayCurrentPoster() {
   title.innerText = titles[getRandomIndex(titles)];
   imageUrl.src = images[getRandomIndex(images)];
   quote.innerText = quotes[getRandomIndex(quotes)];
+  // currentPoster = new Poster(imageUrl.src, title.innerText, quote.innerText);
 };
 
 window.onload = displayCurrentPoster();
@@ -167,17 +169,16 @@ function sendToMainPage() {
 
 function createNewPoster(event) {
   event.preventDefault()
-  currentPoster = new Poster(posterInputImage.value, posterInputTitle.value, posterInputQuote.value);
-  images.push(currentPoster.imageURL), titles.push(currentPoster.title), quotes.push(currentPoster.quote)
-  displayNewPosterFromInput()
+  title.innerText = posterInputTitle.value;
+  imageUrl.src = posterInputImage.value;
+  quote.innerText = posterInputQuote.value;
+  sendToMainPage()
+  // currentPoster = new Poster(posterInputImage.value, posterInputTitle.value, posterInputQuote.value);
+  // displayNewPosterFromInput()
 };
 
-function displayNewPosterFromInput() {
-  title.innerText = currentPoster.title;
-  imageUrl.src = currentPoster.imageURL;
-  quote.innerText = currentPoster.quote;
-  sendToMainPage()
-};
+// function displayNewPosterFromInput() {
+// };
 
 function currentPosterComparison() {
   for (var i = 0; i < savedPosters.length; i++) {
@@ -190,11 +191,15 @@ function currentPosterComparison() {
 };
 
 function savePosterToArray() {
+  currentPoster = new Poster(imageUrl.src, title.innerText, quote.innerText);
+  images.push(currentPoster.imageURL), titles.push(currentPoster.title), quotes.push(currentPoster.quote)
   var compare = currentPosterComparison();
   compare ? null : savedPosters.push(currentPoster);
 };
 
 function addSavedPosterToGrid() {
-  showSavedPostersView();
-  savedPostersGrid.insertAdjacentHTML('afterbegin', "<section class='mini-poster'>test</section>");
+  // showSavedPostersView();
+  savedPostersGrid.insertAdjacentHTML('afterbegin', "<section class='mini-poster'></section>");
+  // currentPoster.title.classList.add('mini-poster');
+  // currentPoster.title.classList.add('mini-poster', 'h2');
 }
