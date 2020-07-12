@@ -132,6 +132,8 @@ takeMeBackButton.addEventListener('click', sendToMainPage);
 backToMainButton.addEventListener('click', sendToMainPage);
 inputForm.addEventListener('submit', createNewPoster);
 savePosterButton.addEventListener('click', savePosterToArray);
+savePosterButton.addEventListener('click', addSavedPosterToGrid);
+
 
 
 // functions and event handlers go here 👇
@@ -193,5 +195,6 @@ function savePosterToArray() {
 };
 
 function addSavedPosterToGrid() {
-  
+  showSavedPostersView();
+  savedPostersGrid.insertAdjacentHTML('afterbegin', "<section class='mini-poster'>test</section>");
 }
