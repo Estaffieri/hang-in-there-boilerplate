@@ -191,3 +191,7 @@ function savePosterToArray() {
   var compare = currentPosterComparison();
   compare ? null : savedPosters.push(currentPoster);
 };
+
+function addSavedPosterToGrid() {
+  
+}
