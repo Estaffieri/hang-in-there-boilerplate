@@ -129,7 +129,7 @@ savedPostersButton.addEventListener('click', showSavedPostersView);
 takeMeBackButton.addEventListener('click', sendToMainPage);
 backToMainButton.addEventListener('click', sendToMainPage);
 inputForm.addEventListener('submit', createNewPoster);
-savePosterButton.addEventListener('click', savePosterToArray)
+savePosterButton.addEventListener('click', savePosterToArray);
 
 
 // functions and event handlers go here 👇
@@ -175,6 +175,17 @@ function displayNewPosterFromInput() {
   sendToMainPage()
 };
 
+function currentPosterComparison() {
+  for (var i = 0; i < savedPosters.length; i++) {
+    if(savedPosters[i].imageURL === currentPoster.imageURL && savedPosters[i].title === currentPoster.title && savedPosters[i].quote === currentPoster.quote) {
+      return true;
+    } else {
+      return false;
+    };
+  };
+};
+
 function savePosterToArray() {
-  savedPosters.push(currentPoster);
+  var compare = currentPosterComparison();
+  compare ? null : savedPosters.push(currentPoster);
 };
