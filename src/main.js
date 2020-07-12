@@ -172,8 +172,8 @@ function createNewPoster(event) {
   title.innerText = posterInputTitle.value;
   imageUrl.src = posterInputImage.value;
   quote.innerText = posterInputQuote.value;
-  sendToMainPage()
   // currentPoster = new Poster(posterInputImage.value, posterInputTitle.value, posterInputQuote.value);
+  sendToMainPage()
   // displayNewPosterFromInput()
 };
 
@@ -181,8 +181,8 @@ function createNewPoster(event) {
 // };
 
 function currentPosterComparison() {
-  for (var i = 0; i < savedPosters.length; i++) {
-    if(savedPosters[i].imageURL === currentPoster.imageURL && savedPosters[i].title === currentPoster.title && savedPosters[i].quote === currentPoster.quote) {
+  for (var i = 0; i <= savedPosters.length; i++) {
+    if((savedPosters[i].imageURL === currentPoster.imageURL) && (savedPosters[i].title === currentPoster.title) && (savedPosters[i].quote === currentPoster.quote)) {
       return true;
     } else {
       return false;
@@ -192,9 +192,14 @@ function currentPosterComparison() {
 
 function savePosterToArray() {
   currentPoster = new Poster(imageUrl.src, title.innerText, quote.innerText);
-  images.push(currentPoster.imageURL), titles.push(currentPoster.title), quotes.push(currentPoster.quote)
   var compare = currentPosterComparison();
-  compare ? null : savedPosters.push(currentPoster);
+  if(compare === false) {
+    savedPosters.push(currentPoster)
+  };
+  // compare ? null : savedPosters.push(currentPoster);
+  images.push(currentPoster.imageURL), titles.push(currentPoster.title), quotes.push(currentPoster.quote)
+  // console.log(currentPoster.title);
+  // console.log(compare);
 };
 
 function addSavedPosterToGrid() {
