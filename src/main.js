@@ -167,6 +167,7 @@ function sendToMainPage() {
 };
 
 function switchPages() {
+  var pageViews = document.querySelectorAll('section');
   
 }
 
