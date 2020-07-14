@@ -166,6 +166,10 @@ function sendToMainPage() {
   savedPostersView.classList.add('hidden');
 };
 
+function switchPages() {
+  
+}
+
 function createNewPoster(event) {
   event.preventDefault()
   title.innerText = posterInputTitle.value;
