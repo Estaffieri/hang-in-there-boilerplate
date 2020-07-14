@@ -128,7 +128,7 @@ randomButton.addEventListener('click', displayCurrentPoster);
 makeYourOwnPosterButton.addEventListener('click', function() {switchPages(createPosterFormView)});
 toSavedPostersViewButton.addEventListener('click', function() {switchPages(savedPostersView)});
 toSavedPostersViewButton.addEventListener('click', addSavedPosterToGrid);
-takeMeBackButton.addEventListener('click', sendToMainPage);
+takeMeBackButton.addEventListener('click', function() {switchPages(mainPosterView)});
 backToMainButton.addEventListener('click', sendToMainPage);
 showNewPosterButton.addEventListener('click', createNewPoster);
 savePosterButton.addEventListener('click', savePosterToArray);
@@ -149,11 +149,6 @@ function displayCurrentPoster() {
 };
 
 window.onload = displayCurrentPoster();
-
-// function showSavedPostersView() {
-//   mainPosterView.classList.add('hidden');
-//   savedPostersView.classList.remove('hidden');
-// };
 
 function sendToMainPage() {
   mainPosterView.classList.remove('hidden');
