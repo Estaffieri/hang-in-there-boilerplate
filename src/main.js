@@ -166,9 +166,12 @@ function sendToMainPage() {
   savedPostersView.classList.add('hidden');
 };
 
-function switchPages() {
+function switchPages(showPage) {
   var pageViews = document.querySelectorAll('section');
-  
+  for ( var i = 0; i < pageViews.length; i++) {
+    pageViews[i].classList.add('hidden')
+  }
+  showPage.classList.remove('hidden')
 }
 
 function createNewPoster(event) {
