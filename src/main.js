@@ -125,7 +125,7 @@ var currentPoster;
 // event listeners go here 👇
 
 randomButton.addEventListener('click', displayCurrentPoster);
-makeYourOwnPosterButton.addEventListener('click', showFormView);
+makeYourOwnPosterButton.addEventListener('click', function() {switchPages(createPosterFormView)});
 toSavedPostersViewButton.addEventListener('click', showSavedPostersView);
 toSavedPostersViewButton.addEventListener('click', addSavedPosterToGrid);
 takeMeBackButton.addEventListener('click', sendToMainPage);
@@ -150,10 +150,10 @@ function displayCurrentPoster() {
 
 window.onload = displayCurrentPoster();
 
-function showFormView() {
-  mainPosterView.classList.add('hidden');
-  createPosterFormView.classList.remove('hidden');
-};
+// function showFormView() {
+//   mainPosterView.classList.add('hidden');
+//   createPosterFormView.classList.remove('hidden');
+// };
 
 function showSavedPostersView() {
   mainPosterView.classList.add('hidden');
