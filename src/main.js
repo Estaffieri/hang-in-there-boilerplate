@@ -126,7 +126,7 @@ var currentPoster;
 
 randomButton.addEventListener('click', displayCurrentPoster);
 makeYourOwnPosterButton.addEventListener('click', function() {switchPages(createPosterFormView)});
-toSavedPostersViewButton.addEventListener('click', showSavedPostersView);
+toSavedPostersViewButton.addEventListener('click', function() {switchPages(savedPostersView)});
 toSavedPostersViewButton.addEventListener('click', addSavedPosterToGrid);
 takeMeBackButton.addEventListener('click', sendToMainPage);
 backToMainButton.addEventListener('click', sendToMainPage);
@@ -150,15 +150,10 @@ function displayCurrentPoster() {
 
 window.onload = displayCurrentPoster();
 
-// function showFormView() {
+// function showSavedPostersView() {
 //   mainPosterView.classList.add('hidden');
-//   createPosterFormView.classList.remove('hidden');
+//   savedPostersView.classList.remove('hidden');
 // };
-
-function showSavedPostersView() {
-  mainPosterView.classList.add('hidden');
-  savedPostersView.classList.remove('hidden');
-};
 
 function sendToMainPage() {
   mainPosterView.classList.remove('hidden');
