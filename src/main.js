@@ -14,7 +14,6 @@ var posterInputImage = document.querySelector('#poster-image-url');
 var posterInputTitle = document.querySelector('#poster-title');
 var posterInputQuote = document.querySelector('#poster-quote');
 var showNewPosterButton = document.querySelector('.make-poster');
-var inputForm = document.querySelector('form');
 var savePosterButton = document.querySelector('.save-poster');
 var savedPostersGrid = document.querySelector('.saved-posters-grid');
 var miniPoster = document.querySelector('.mini-poster');
