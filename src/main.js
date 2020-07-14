@@ -6,7 +6,7 @@ var randomButton = document.querySelector('.show-random');
 var makeYourOwnPosterButton = document.querySelector('.show-form');
 var mainPosterView = document.querySelector('.main-poster');
 var createPosterFormView = document.querySelector('.poster-form');
-var savedPostersButton = document.querySelector('.show-saved');
+var toSavedPostersViewButton = document.querySelector('.show-saved');
 var savedPostersView = document.querySelector('.saved-posters');
 var takeMeBackButton = document.querySelector('.show-main');
 var backToMainButton = document.querySelector('.back-to-main');
@@ -17,6 +17,7 @@ var showNewPosterButton = document.querySelector('.make-poster');
 var inputForm = document.querySelector('form');
 var savePosterButton = document.querySelector('.save-poster');
 var savedPostersGrid = document.querySelector('.saved-posters-grid');
+var miniPoster = document.querySelector('.mini-poster');
 
 
 // we've provided you with some data to work with 👇
@@ -127,12 +128,13 @@ var currentPoster;
 
 randomButton.addEventListener('click', displayCurrentPoster);
 makeYourOwnPosterButton.addEventListener('click', showFormView);
-savedPostersButton.addEventListener('click', showSavedPostersView);
+toSavedPostersViewButton.addEventListener('click', showSavedPostersView);
+toSavedPostersViewButton.addEventListener('click', addSavedPosterToGrid);
 takeMeBackButton.addEventListener('click', sendToMainPage);
 backToMainButton.addEventListener('click', sendToMainPage);
 showNewPosterButton.addEventListener('click', createNewPoster);
 savePosterButton.addEventListener('click', savePosterToArray);
-savePosterButton.addEventListener('click', addSavedPosterToGrid);
+// savePosterButton.addEventListener('click', addSavedPosterToGrid);
 
 
 
@@ -192,10 +194,17 @@ function savePosterToArray() {
   quotes.includes(currentPoster.quote) ? null : quotes.push(currentPoster.quote);
 };
 
-
 function addSavedPosterToGrid() {
-  // showSavedPostersView();
-  savedPostersGrid.insertAdjacentHTML('afterbegin', "<section class='mini-poster'></section>");
-  // currentPoster.title.classList.add('mini-poster');
-  // currentPoster.title.classList.add('mini-poster', 'h2');
-};
+  var miniPosterHTML = ""
+  for ( var i = 0; i < savedPosters.length; i++) {
+
+    miniPosterHTML += `
+      <section class="mini-poster">
+        <img src="${savedPosters[i].imageURL}" />
+        <h2>${savedPosters[i].title}</h2>
+        <h4>${savedPosters[i].quote} </h4>
+      </section>
+    `
+  }
+  savedPostersGrid.innerHTML = miniPosterHTML;
+}
