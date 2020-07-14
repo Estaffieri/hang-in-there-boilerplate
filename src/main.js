@@ -117,13 +117,10 @@ var quotes = [
   "A champion is defined not by their wins but by how they can recover when they fall."
 ];
 var savedPosters = [];
-
-
 var currentPoster;
 
 
 // event listeners go here 👇
-
 randomButton.addEventListener('click', displayCurrentPoster);
 makeYourOwnPosterButton.addEventListener('click', function() {switchPages(createPosterFormView)});
 toSavedPostersViewButton.addEventListener('click', function() {switchPages(savedPostersView)});
@@ -132,9 +129,6 @@ takeMeBackButton.addEventListener('click', function() {switchPages(mainPosterVie
 backToMainButton.addEventListener('click', function() {switchPages(mainPosterView)});
 showNewPosterButton.addEventListener('click', createNewPoster);
 savePosterButton.addEventListener('click', savePosterToArray);
-// savePosterButton.addEventListener('click', addSavedPosterToGrid);
-
-
 
 // functions and event handlers go here 👇
 function getRandomIndex(array) {
@@ -149,12 +143,6 @@ function displayCurrentPoster() {
 };
 
 window.onload = displayCurrentPoster();
-
-// function sendToMainPage() {
-//   mainPosterView.classList.remove('hidden');
-//   createPosterFormView.classList.add('hidden');
-//   savedPostersView.classList.add('hidden');
-// };
 
 function switchPages(showPage) {
   var pageViews = document.querySelectorAll('section');
@@ -172,7 +160,6 @@ function createNewPoster(event) {
   currentPoster = new Poster(imageUrl.src, title.innerText, quote.innerText);
   switchPages(mainPosterView)
 };
-
 
 function currentPosterComparison(poster, index) {
   return (index.imageURL === poster.imageURL && index.title === poster.title && index.quote === poster.quote)
