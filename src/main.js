@@ -129,7 +129,7 @@ makeYourOwnPosterButton.addEventListener('click', function() {switchPages(create
 toSavedPostersViewButton.addEventListener('click', function() {switchPages(savedPostersView)});
 toSavedPostersViewButton.addEventListener('click', addSavedPosterToGrid);
 takeMeBackButton.addEventListener('click', function() {switchPages(mainPosterView)});
-backToMainButton.addEventListener('click', sendToMainPage);
+backToMainButton.addEventListener('click', function() {switchPages(mainPosterView)});
 showNewPosterButton.addEventListener('click', createNewPoster);
 savePosterButton.addEventListener('click', savePosterToArray);
 // savePosterButton.addEventListener('click', addSavedPosterToGrid);
@@ -150,11 +150,11 @@ function displayCurrentPoster() {
 
 window.onload = displayCurrentPoster();
 
-function sendToMainPage() {
-  mainPosterView.classList.remove('hidden');
-  createPosterFormView.classList.add('hidden');
-  savedPostersView.classList.add('hidden');
-};
+// function sendToMainPage() {
+//   mainPosterView.classList.remove('hidden');
+//   createPosterFormView.classList.add('hidden');
+//   savedPostersView.classList.add('hidden');
+// };
 
 function switchPages(showPage) {
   var pageViews = document.querySelectorAll('section');
@@ -170,7 +170,7 @@ function createNewPoster(event) {
   imageUrl.src = posterInputImage.value;
   quote.innerText = posterInputQuote.value;
   currentPoster = new Poster(imageUrl.src, title.innerText, quote.innerText);
-  sendToMainPage()
+  switchPages(mainPosterView)
 };
 
 
