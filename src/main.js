@@ -16,7 +16,6 @@ var posterInputQuote = document.querySelector('#poster-quote');
 var showNewPosterButton = document.querySelector('.make-poster');
 var savePosterButton = document.querySelector('.save-poster');
 var savedPostersGrid = document.querySelector('.saved-posters-grid');
-var miniPoster = document.querySelector('.mini-poster');
 
 
 // we've provided you with some data to work with 👇
