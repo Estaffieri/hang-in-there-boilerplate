@@ -46,7 +46,9 @@ Our estimated schedule is as follows:
 
 7/12: Added savedPostersGrid global variable. Added savePosterToGrid function. Debugged and refactored the showMyPoster button. Conducted function review, found bugs.
 
-7/13: Fixed duplication bug with savePosterToArray button. Renamed some confusing variable names. Added html to mini-poster class using interpolation to get saved posters page to populate. 
+7/13: Fixed duplication bug with savePosterToArray button. Renamed some confusing variable names. Added html to mini-poster class using interpolation to get saved posters page to populate.
+
+7/14: Removed unneeded global variables. Analyzed ternary statements for array populating. Concluded that ternaries functioned correctly but did not express developer empathy. Created switchPages function to dry up repetitive functions. Declared a querySelector for switchPages. Looped over page views, adding or removing the hidden attribute as declared. Added it to the relevant eventListeners. Removed old code and fixed spacing.
 
 ## Functionality Showcase
 
