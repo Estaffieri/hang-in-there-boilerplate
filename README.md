@@ -20,13 +20,6 @@ For our mod 1 paired project, we will build a webpage that randomly generates mo
 
 We will develop our skills and understanding in JS functionality and changing webpage views.
 
-Our estimated schedule is as follows:
-
-- **7/07-08/2020**
-- **7/09-10/2020**
-- **7/11-12/2020**
-- **7/13-14/2020**
-
 ## Progression
 
 7/7: Gave day one deliverables to instructors and reviewed the project scope. Created DTR version one.
