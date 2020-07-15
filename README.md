@@ -28,10 +28,6 @@ We will develop our skills and understanding in JS functionality and changing we
 
 7/9: Fixed GitHub remote repo connection. Initial commit was created to load poster when window is refreshed with the displayCurrentPoster function. We created the functionality for the "show another random poster button". We then pushed these updates to our master branch. We then created the showFormView, showSavedPostersView, and sendToMainPage functions.
 
-<p align="center">Image of Main Poster View </br>
-  <img width="460" height="300" src="" alt="Screenshot of Main Poster View ">
-</p>
-
 
 7/10: Update the project README file and added project progression notes. Created createNewPoster function, with intention of revisiting ideas on 7/11.
 
@@ -45,20 +41,24 @@ We will develop our skills and understanding in JS functionality and changing we
 
 ## Functionality Showcase
 
-<p align="center">What does it show</br>
-  <img width="460" height="300" src="" alt="What does it show">
+<p align="center">Image of Main Poster View </br>
+  <img width="460" height="300" src="./readme-imgs/Main-Poster-Page-HIT.png" alt="Screenshot of Main Poster View ">
 </p>
 
-<p align="center"> What does it show</br>
-  <img width="460" height="300" src="" alt="What does it show">
+<p align="center">Image of Form View </br>
+  <img width="460" height="300" src="./readme-imgs/Form-View-HIT.png" alt="Screenshot of Form View ">
 </p>
 
-<p align="center">What does it show </br>
-  <img width="460" height="300" src="" alt="What does it show">
+<p align="center">Image of Poster from Form Inputs</br>
+  <img width="460" height="300" src="./readme-imgs/Poster-From-Form-HIT.png" alt="Screenshot of Poster from Form inputs">
 </p>
 
-<p align="center">What does it show</br>
-  <img width="460" height="300" src="" alt="What does it show">
+<p align="center">Image of Saved Posters Collection </br>
+  <img width="460" height="300" src="./readme-imgs/Saved-Poster-HIT.png" alt="Screenshot of three posters side by side">
+</p>
+
+<p align="center">Journey Through the Site</br>
+  <img width="460" height="300" src="https://media.giphy.com/media/VI8P1Joj89eRX5IXkl/giphy.gif" alt="video of various site functionalities from main page to saved posters display">
 </p>
 
 Project spec & rubric can be found [here](https://frontend.turing.io/projects/module-1/hang-in-there.html)
