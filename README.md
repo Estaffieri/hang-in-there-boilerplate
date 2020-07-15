@@ -46,7 +46,7 @@ Our estimated schedule is as follows:
 
 7/12: Added savedPostersGrid global variable. Added savePosterToGrid function. Debugged and refactored the showMyPoster button. Conducted function review, found bugs.
 
-7/13:
+7/13: Fixed duplication bug with savePosterToArray button. Renamed some confusing variable names. Added html to mini-poster class using interpolation to get saved posters page to populate. 
 
 ## Functionality Showcase
 
