@@ -40,9 +40,9 @@ Our estimated schedule is as follows:
 </p>
 
 
-7/10: Update the project README file and added project progression notes.
+7/10: Update the project README file and added project progression notes. Created createNewPoster function, with intention of revisiting ideas on 7/11.
 
-7/11:
+7/11: 
 
 7/12:
 
