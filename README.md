@@ -20,13 +20,6 @@ For our mod 1 paired project, we will build a webpage that randomly generates mo
 
 We will develop our skills and understanding in JS functionality and changing webpage views.
 
-Our estimated schedule is as follows:
-
-- **7/07-08/2020**
-- **7/09-10/2020**
-- **7/11-12/2020**
-- **7/13-14/2020**
-
 ## Progression
 
 7/7: Gave day one deliverables to instructors and reviewed the project scope. Created DTR version one.
@@ -40,13 +33,15 @@ Our estimated schedule is as follows:
 </p>
 
 
-7/10: Update the project README file and added project progression notes.
+7/10: Update the project README file and added project progression notes. Created createNewPoster function, with intention of revisiting ideas on 7/11.
 
-7/11:
+7/11: Connected user inputs to arrays via a new Poster class instance. Displayed user created poster on mainPosterView. Corrected the eventListener for createNewPoster and deleted unneeded pseudocode. Added the savePosterToArray function removing duplicates.
 
-7/12:
+7/12: Added savedPostersGrid global variable. Added savePosterToGrid function. Debugged and refactored the showMyPoster button. Conducted function review, found bugs.
 
-7/13:
+7/13: Fixed duplication bug with savePosterToArray button. Renamed some confusing variable names. Added html to mini-poster class using interpolation to get saved posters page to populate.
+
+7/14: Removed unneeded global variables. Analyzed ternary statements for array populating. Concluded that ternaries functioned correctly but did not express developer empathy. Created switchPages function to dry up repetitive functions. Declared a querySelector for switchPages. Looped over page views, adding or removing the hidden attribute as declared. Added it to the relevant eventListeners. Removed old code and fixed spacing.
 
 ## Functionality Showcase
 

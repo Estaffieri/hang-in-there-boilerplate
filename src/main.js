@@ -158,7 +158,7 @@ function createNewPoster(event) {
   imageUrl.src = posterInputImage.value;
   quote.innerText = posterInputQuote.value;
   currentPoster = new Poster(imageUrl.src, title.innerText, quote.innerText);
-  switchPages(mainPosterView)
+  switchPages(mainPosterView);
 };
 
 function currentPosterComparison(poster, index) {
@@ -172,9 +172,9 @@ function savePosterToArray() {
     };
   };
   savedPosters.push(currentPoster);
-  titles.includes(currentPoster.title.toLowerCase()) ? null : titles.push(currentPoster.title.toLowerCase());
-  images.includes(currentPoster.image) ? null : images.push(currentPoster.imageURL);
-  quotes.includes(currentPoster.quote) ? null : quotes.push(currentPoster.quote);
+  titles.push(currentPoster.title);
+  images.push(currentPoster.imageURL);
+  quotes.push(currentPoster.quote);
 };
 
 function addSavedPosterToGrid() {
