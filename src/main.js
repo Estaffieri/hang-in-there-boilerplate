@@ -172,9 +172,10 @@ function savePosterToArray() {
     };
   };
   savedPosters.push(currentPoster);
-  titles.includes(currentPoster.title.toLowerCase()) ? null : titles.push(currentPoster.title.toLowerCase());
-  images.includes(currentPoster.image) ? null : images.push(currentPoster.imageURL);
-  quotes.includes(currentPoster.quote) ? null : quotes.push(currentPoster.quote);
+  compareArrays(currentPoster.title.toLowerCase(), currentPoster.image, currentPoster.quote)
+  // titles.includes(currentPoster.title.toLowerCase()) ? null : titles.push(currentPoster.title.toLowerCase());
+  // images.includes(currentPoster.image) ? null : images.push(currentPoster.imageURL);
+  // quotes.includes(currentPoster.quote) ? null : quotes.push(currentPoster.quote);
 };
 
 function addSavedPosterToGrid() {
