@@ -44,7 +44,7 @@ Our estimated schedule is as follows:
 
 7/11: Connected user inputs to arrays via a new Poster class instance. Displayed user created poster on mainPosterView. Corrected the eventListener for createNewPoster and deleted unneeded pseudocode. Added the savePosterToArray function removing duplicates.
 
-7/12:
+7/12: Added savedPostersGrid global variable. Added savePosterToGrid function. Debugged and refactored the showMyPoster button. Conducted function review, found bugs.
 
 7/13:
 
