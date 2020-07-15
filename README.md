@@ -42,7 +42,7 @@ Our estimated schedule is as follows:
 
 7/10: Update the project README file and added project progression notes. Created createNewPoster function, with intention of revisiting ideas on 7/11.
 
-7/11: 
+7/11: Connected user inputs to arrays via a new Poster class instance. Displayed user created poster on mainPosterView. Corrected the eventListener for createNewPoster and deleted unneeded pseudocode. Added the savePosterToArray function removing duplicates.
 
 7/12:
 
